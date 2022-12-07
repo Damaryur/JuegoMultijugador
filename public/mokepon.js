@@ -162,7 +162,7 @@ function iniciarjuego() {
 }
 
 function unirseAlJuego() {
-    fetch("http://192.168.0.108:8080/unirse")
+    fetch("https://juegomultijugador.netlify.app/unirse")
         .then(function (res) {
             if (res.ok) {
                 res.text()
@@ -199,7 +199,7 @@ function seleccionarMascotaJugaor () {
 }
 
 function seleccionarMokepon(mascotaJugador) {
-    fetch(`http://192.168.0.108:8080/mokepon/${judadorId}`, { 
+    fetch(`https://juegomultijugador.netlify.app/mokepon/${judadorId}`, { 
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -265,7 +265,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques() {
-    fetch(`http://192.168.0.108:8080/mokepon/${judadorId}/ataques`, {
+    fetch(`https://juegomultijugador.netlify.app/mokepon/${judadorId}/ataques`, {
         method:"post",
         headers: {
             "Content-Type": "application/json"
@@ -279,7 +279,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://192.168.0.108:8080/mokepon/${enemigoId}/ataques`)
+    fetch(`https://juegomultijugador.netlify.app/mokepon/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -425,7 +425,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://192.168.0.108:8080/mokepon/${judadorId}/posicion`, {
+    fetch(`https://192.168.0.108:8080/mokepon/${judadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
